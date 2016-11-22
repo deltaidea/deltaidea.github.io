@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Bacterio",
+    "url": "https://deltaidea.github.io/bacterio/",
+    "desc": "Neural Networks and Evolution playground"
+  },
+  {
+    "name": "vk-x",
+    "url": "https://vk-x.js.org",
+    "desc": "Chrome extension for vk.com"
+  },
+  {
+    "name": "mcpm",
+    "url": "https://github.com/mcpm/mcpm",
+    "desc": "Minecraft Package Manager"
+  }
+]
