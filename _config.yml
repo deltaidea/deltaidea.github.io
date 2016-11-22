@@ -68,4 +68,7 @@ theme: cactus-dark
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:deltaidea/deltaidea.github.io.git
+  branch: master
+  message: "chore(update): {{ now('YYYY-MM-DD HH:mm:ss') }}"
