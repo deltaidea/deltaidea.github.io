@@ -1,0 +1,36 @@
+nav:
+  Home: /
+  Writing: /archives/
+  Projects: https://github.com/deltaidea?tab=repositories
+
+projects_url: https://github.com/deltaidea
+
+customize:
+  logo:
+    enabled: true
+    width: 50
+    height: 50
+    url: /images/logo.png
+    favicon: /images/favicon.png
+  social_links:
+    github: https://github.com/deltaidea
+    twitter: https://twitter.com/deltaidea
+    vk: https://vk.com/deltaidea
+  post_count: 5
+  highlight: rainbow
+
+# RSS
+rss: false
+
+# Plugins
+plugins:
+  disqus_shortname: # Disqus Comments Shortname
+  google_analytics: # enter the tracking ID for your Google Analytics
+
+# Miscellaneous
+miscellaneous:
+  open_graph: # see http://ogp.me
+    fb_app_id:
+    fb_admins:
+    twitter_id:
+    google_plus:
