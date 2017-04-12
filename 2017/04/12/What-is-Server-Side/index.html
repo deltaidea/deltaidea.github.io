@@ -7,15 +7,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.
-This time, we’re gonna explore the concept of the server side of websites.
-Let">
+This time, we’re going to explore the concept of the server side of websites.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="What is Server Side">
 <meta property="og:url" content="http://yoursite.com/2017/04/12/What-is-Server-Side/index.html">
 <meta property="og:site_name" content="deltaidea">
 <meta property="og:description" content="I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.
-This time, we’re gonna explore the concept of the server side of websites.
-Let">
+This time, we’re going to explore the concept of the server side of websites.">
 <meta property="og:image" content="http://yoursite.com/images/xampp-download-page.png">
 <meta property="og:image" content="http://yoursite.com/images/xampp-installation.png">
 <meta property="og:image" content="http://yoursite.com/images/xampp-apache-firewall.png">
@@ -23,12 +21,11 @@ Let">
 <meta property="og:image" content="http://yoursite.com/images/xampp-welcome-page.png">
 <meta property="og:image" content="http://yoursite.com/images/xampp-php-hello-world.png">
 <meta property="og:image" content="http://yoursite.com/images/nodejs-open-file-with-nodejs.png">
-<meta property="og:updated_time" content="2017-04-12T01:20:00.415Z">
+<meta property="og:updated_time" content="2017-04-12T02:53:29.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What is Server Side">
 <meta name="twitter:description" content="I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.
-This time, we’re gonna explore the concept of the server side of websites.
-Let">
+This time, we’re going to explore the concept of the server side of websites.">
 <meta name="twitter:image" content="http://yoursite.com/images/xampp-download-page.png">
     
     
@@ -128,44 +125,38 @@ Let">
 
   <div class="content" itemprop="articleBody">
     <p>I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.</p>
-<p>This time, we’re gonna explore the concept of the <strong>server side of websites</strong>.</p>
+<p>This time, we’re going to explore the concept of the <strong>server side of websites</strong>.</p>
 <p>Let’s assume you’ve fiddled with HTML and at least once created an <code>.html</code> file on your computer and viewed it in a browser.</p>
 <p>You open your browser of choice, enter <code>google.com</code> and in a second you see the Google search page. The page consists of HTML code, sure. But it’s different each time based on your search query, Google account, location and so on. It’s clearly not just an <code>.html</code> file being loaded from somewhere. <em>Why does it change? How?!</em></p>
-<h2 id="Computers-talking-to-each-other"><a href="#Computers-talking-to-each-other" class="headerlink" title="Computers talking to each other"></a>Computers talking to each other</h2><p>I’m gonna oversimplify in this section.</p>
-<p>You are connected to either a router or a mobile network tower on a building nearby if you’re on data. Whichever it is, we’ll call it <strong>the gateway</strong>.</p>
-<p>Your device is in blissful ignorance about the outside world. The Internet on the other side of the gateway is as much of an incomprehensible black box to your device as it is to you.</p>
-<p>Every computer, laptop and phone only ever communicates to its gateway.</p>
-<p>On the other end, there’s another machine set up by your ISP, usually a slightly bigger one than your router. Your whole apartment complex or neightbourhood is connected to it. And it too has a gateway of it’s own.</p>
-<p>We need to go deeper! The next level is also your ISP. This time though, the routing device has not one but multiple paths forward! At this level, the router looks at your <code>google.com</code> and decides which way to forward it. It <em>routes</em> your request — to another connected neighbourhood, or to another city, or to a gateway of another ISP.</p>
-<p>Part of the job of being an ISP is to configure gateways to forward requests closer to specified addresses, one gateway at a time.</p>
-<p><em>It’s gateways all the way down.</em></p>
-<p>When you want to go to <code>google.com</code>, your computer talks to its local network gateway, which sets off a chain reaction through the whole path to another computer. Every domain name like <code>google.com</code> is an address of a machine somewhere in the world.</p>
-<p>That machine runs software that waits for page requests and responds to them. This machine is called <strong>the server</strong> of a website and this software that generates webpages and responds to requests is called <strong>the server</strong> of the website. Wait, <em>what?</em> Yeah…</p>
-<p>Sometimes the hardware part is called <strong>the hosting</strong> and the software is called <strong>the server-side</strong>, as opposed to the client-side code that includes HTML and JavaScript executed in your browser.</p>
-<details><br><summary><em>Huh?</em> Click here for more details on networking.</summary><br><br>To learn about networks without such gross simpification watch <a href="https://www.youtube.com/playlist?list=PLowKtXNTBypH19whXTVoG3oKSuOcw_XeW" target="_blank" rel="external">these 13 short videos by Ben Eater</a> on Youtube. I watched them twice. <em>For fun</em>. They are that good.<br></details>
+<h2 id="Computers-talking-to-each-other"><a href="#Computers-talking-to-each-other" class="headerlink" title="Computers talking to each other"></a>Computers talking to each other</h2><p>Since you can read this post, you’re connected to the Internet. This connection allows you to exchange information with other computers. Every domain name like <code>google.com</code> is an address of a computer somewhere in the world.</p>
+<details><br><summary><em>Huh?</em> Click here to learn what it means to connect to another computer and how it works.</summary><br><br>To <em>really</em> learn about networks watch <a href="https://www.youtube.com/playlist?list=PLowKtXNTBypH19whXTVoG3oKSuOcw_XeW" target="_blank" rel="external">these 13 short videos by Ben Eater</a> on YouTube. I watched them twice. <em>For fun</em>. They are that good.<br></details>
 
+<p>The computer with address <code>google.com</code> runs software that waits for page requests and responds to them. The machine itself is called <strong>the server</strong> of a website, while the software that generates webpages and responds to requests is called <strong>the server</strong> of the website. Wait, <em>what?</em> Yeah… Let’s try to clear that up.</p>
 <h2 id="Real-example-—-PHP"><a href="#Real-example-—-PHP" class="headerlink" title="Real example — PHP"></a>Real example — PHP</h2><p>Enough talking, let’s run server software on your computer!</p>
 <p>PHP is a language based on HTML and a program for translating it into HTML.</p>
 <ul>
 <li>You write ordinary HTML but can also use a special tag <code>&lt;?php ... ?&gt;</code>, inside which you write in PHP.</li>
 <li>You then process it using the PHP program. It executes PHP code inside those tags and gives you plain HTML that you can send to browsers.</li>
 </ul>
-<p>As you can see, no mention of web requests and responding to them.</p>
-<p>Hmm… Yeah, we’ll need a separate program for that. This one is called Apache. You specify which folder contains the website files and it sends them as responses to browsers. You can also tell it to preprocess certain files with another program before sending. In our case, that’s PHP for <code>.php</code> files.</p>
-<details><br><summary>Download latest <a href="https://www.apachefriends.org/download.html" target="_blank" rel="external">XAMPP</a> — a bundle with Apache and PHP included.</summary><br><br><img src="/images/xampp-download-page.png" alt="XAMPP download page"><br><br><em>Scroll further on that page for Linux and OS X downloads.</em><br></details><br><details><br><summary>Install all the things! Actually we only need Apache and PHP. You may deselect everything else.</summary><br><br><img src="/images/xampp-installation.png" alt="XAMPP installation"><br></details><br><details><br><summary>Allow Apache to access networking features of your computer.</summary><br><br><img src="/images/xampp-apache-firewall.png" alt="Windows Firewall complains about Apache"><br></details><br><details><br><summary>Launch the XAMPP Control Panel and start Apache - click “Start” on the Apache row.</summary><br><br><img src="/images/xampp-control-panel.png" alt="XAMPP Control Panel"><br></details>
+<p>As you can see, no mention of web requests and responding to them. That’s a job for a separate piece of software, a <strong>web server</strong>. Let’s use one called <a href="https://www.wikiwand.com/en/Apache_HTTP_Server" target="_blank" rel="external">Apache</a>.</p>
+<p>You specify which folder contains <code>*.html</code> and other website files and Apache sends them as responses to browsers. A browser requesting <code>example.com/foo/bar.png</code> from a computer with running Apache would tell it to respond with <code>foo/bar.png</code> from the website folder.</p>
+<p>You can also tell Apache to preprocess certain files with another program before sending. In our case, that’s PHP for <code>.php</code> files.</p>
+<details><br><summary>Download latest <a href="https://www.apachefriends.org/download.html" target="_blank" rel="external">XAMPP</a> — a bundle with Apache and PHP included.</summary><br><br><img src="/images/xampp-download-page.png" alt="XAMPP download page"><br><br><em>Scroll further on that page for Linux and OS X downloads.</em><br></details><br><details><br><summary>Install all the things! Actually, we only need Apache and PHP. You may deselect everything else.</summary><br><br><img src="/images/xampp-installation.png" alt="XAMPP installation"><br></details><br><details><br><summary>Allow Apache to access networking features of your computer.</summary><br><br><img src="/images/xampp-apache-firewall.png" alt="Windows Firewall complains about Apache"><br></details><br><details><br><summary>Launch the XAMPP Control Panel and start Apache — click “Start” next to Apache.</summary><br><br><img src="/images/xampp-control-panel.png" alt="XAMPP Control Panel"><br></details>
 
-<p>Now open <a href="http://localhost" target="_blank" rel="external">http://localhost</a> in your browser. This address always refers to <em>this</em> device - the current one you’re using.</p>
+<p>Now open <a href="http://localhost" target="_blank" rel="external">http://localhost</a> in your browser. This address always refers to <em>this</em> device — the current one you’re using.</p>
 <details><br><summary>You should see <em>“Welcome to XAMPP”</em>.</summary><br><br><img src="/images/xampp-welcome-page.png" alt="XAMPP Dashboard Welcome page"><br></details>
 
-<p>You may not realize it yet, but you’re successfully running Apache with PHP locally — on your computer — and look at a page generated dynamically.</p>
+<p>You may not realize it yet, but you’re successfully running Apache with PHP and are looking at a page generated dynamically on your computer.</p>
 <p>What’s the folder where you installed XAMPP? For me it’s <code>C:\xampp</code>. Go there, open folder <code>htdocs</code> inside and delete everything from it. That’s the welcome page stuff.</p>
-<p>Now open any plain text editor (Notepad, Sublime Text, …) and create a file <code>index.php</code> inside the <code>htdocs</code> folder. Insert the following code:</p>
+<p>Now open any text editor (Notepad, <a href="https://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a>, …) and create a file <code>index.php</code> inside the <code>htdocs</code> folder. Insert the following code:</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;h2&gt;Hello world!&lt;/h2&gt;</div><div class="line">    Today is: &lt;b&gt;<span class="meta">&lt;?php</span> <span class="keyword">echo</span>(date(<span class="string">'Y-m-d'</span>)) <span class="meta">?&gt;</span>&lt;/b&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>Go to <a href="http://localhost/" target="_blank" rel="external">http://localhost</a> again and you should see this:</p>
 <p><img src="/images/xampp-php-hello-world.png" alt="XAMPP PHP Hello World"></p>
-<p>It’s crucial to understand how this is fundamentally different from ordinary HTML. In this example <code>&lt;?php ?&gt;</code> tag is preprocessed by PHP and <em>is never sent to the browser</em>. It’s already executed and translated to resulting HTML before sending.</p>
+<p>This is what the browser gets as the response:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;h2&gt;Hello world!&lt;/h2&gt;</div><div class="line">    Today is: &lt;b&gt;<span class="number">2017</span><span class="number">-04</span><span class="number">-12</span>&lt;/b&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>It’s crucial to understand how this is fundamentally different from ordinary HTML. In this example <code>&lt;?php ?&gt;</code> tag is preprocessed by PHP and <em>is never sent to the browser</em>. It’s already executed and translated to the resulting HTML before sending. This is why PHP is considered a <strong>server-side</strong> language, while HTML is client-side.</p>
 <p>Now open XAMPP Control Panel again and click “Stop” next to Apache. Only one program at a time is allowed to respond to web requests. We need to give this spot to Node.js in the example below.</p>
-<h2 id="Real-example-—-Node-js"><a href="#Real-example-—-Node-js" class="headerlink" title="Real example — Node.js"></a>Real example — Node.js</h2><p>Let’s go! Same instructions, only this time the server-side language is gonna be JavaScript and not PHP.</p>
+<h2 id="Real-example-—-Node-js"><a href="#Real-example-—-Node-js" class="headerlink" title="Real example — Node.js"></a>Real example — Node.js</h2><p>Let’s go! Same instructions, only this time the server-side language is going to be JavaScript and not PHP.</p>
 <ul>
 <li>Download latest <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js</a>.</li>
 <li>Install it.</li>
@@ -177,6 +168,7 @@ Let">
 
 <p>A black command line window should open, which is where your code runs.</p>
 <p>Go to <a href="http://localhost/" target="_blank" rel="external">http://localhost</a> again and you should see the same result as in the previous example with PHP.</p>
+<p>Node.js has a built-in web server so you don’t need something like Apache.</p>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>Although it’s not clear from the pratical examples above, the actual mechanism of web requests and responses is quite simple.</p>
 <p>There’s no magic. In fact, web servers and browsers talk in plain text.</p>
 <p>Let’s have a look at what’s going on under the hood when you go to <code>http://google.com/about</code>. Your browser sends the following request — yes, as simple text:</p>
@@ -192,9 +184,9 @@ Let">
 <p>When someone says they are deploying a website, it means they already have source code (PHP, JavaScript or any other) ready and are in the process of:</p>
 <ul>
 <li>uploading it to the machine that acts as the server</li>
-<li>and then launching/updating the server software.</li>
+<li>and then launching/updating the web server.</li>
 </ul>
-<h2 id="Further-reading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading</h2><p>Just google what you wanna know, lol.</p>
+<h2 id="Further-reading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading</h2><p>Just google what you want to know, lol.</p>
 
   </div>
 </article>
