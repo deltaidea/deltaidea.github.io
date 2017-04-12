@@ -116,7 +116,7 @@ Let's go! Same instructions, only this time the server-side language is going to
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  const date = new Date
+  const date = new Date();
   const readableDate = date.getFullYear() + '-' +
     (date.getMonth() + 1) + '-' +
     date.getDate();
@@ -128,7 +128,7 @@ const server = http.createServer((req, res) => {
         Today is: <b>${readableDate}</b>
       </body>
     </html>
-  `
+  `;
 
   res.statusCode = 200;
   res.end(html);
