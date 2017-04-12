@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.
+This time, we’re gonna explore the concept of the server side of websites.
+Let">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What is Server Side">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/What-is-Server-Side/index.html">
+<meta property="og:site_name" content="deltaidea">
+<meta property="og:description" content="I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.
+This time, we’re gonna explore the concept of the server side of websites.
+Let">
+<meta property="og:image" content="http://yoursite.com/images/xampp-download-page.png">
+<meta property="og:image" content="http://yoursite.com/images/xampp-installation.png">
+<meta property="og:image" content="http://yoursite.com/images/xampp-apache-firewall.png">
+<meta property="og:image" content="http://yoursite.com/images/xampp-control-panel.png">
+<meta property="og:image" content="http://yoursite.com/images/xampp-welcome-page.png">
+<meta property="og:image" content="http://yoursite.com/images/xampp-php-hello-world.png">
+<meta property="og:image" content="http://yoursite.com/images/nodejs-open-file-with-nodejs.png">
+<meta property="og:updated_time" content="2017-04-12T01:20:00.415Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What is Server Side">
+<meta name="twitter:description" content="I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.
+This time, we’re gonna explore the concept of the server side of websites.
+Let">
+<meta name="twitter:image" content="http://yoursite.com/images/xampp-download-page.png">
+    
+    
+    <!-- title -->
+    <title>What is Server Side</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/deltaidea?tab=repositories">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+      <ul>
+        
+        
+        <li><a class="icon" href="/2016/11/22/Hello-World/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+        <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/12/What-is-Server-Side/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&text=What is Server Side"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&title=What is Server Side"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&is_video=false&description=What is Server Side"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="mailto:?subject=What is Server Side&body=Check out this article: http://yoursite.com/2017/04/12/What-is-Server-Side/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&title=What is Server Side"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&title=What is Server Side"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&title=What is Server Side"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&title=What is Server Side"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/12/What-is-Server-Side/&name=What is Server Side&description="><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Computers-talking-to-each-other"><span class="toc-number">1.</span> <span class="toc-text">Computers talking to each other</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Real-example-—-PHP"><span class="toc-number">2.</span> <span class="toc-text">Real example — PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Real-example-—-Node-js"><span class="toc-number">3.</span> <span class="toc-text">Real example — Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP"><span class="toc-number">4.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Deployment"><span class="toc-number">5.</span> <span class="toc-text">Deployment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-reading"><span class="toc-number">6.</span> <span class="toc-text">Further reading</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        What is Server Side
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">deltaidea</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-11T20:07:17.000Z" itemprop="datePublished">2017-04-12</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I’ve had to explain how the Internet works for many times over the last few years. It’s time to write parts of that down.</p>
+<p>This time, we’re gonna explore the concept of the <strong>server side of websites</strong>.</p>
+<p>Let’s assume you’ve fiddled with HTML and at least once created an <code>.html</code> file on your computer and viewed it in a browser.</p>
+<p>You open your browser of choice, enter <code>google.com</code> and in a second you see the Google search page. The page consists of HTML code, sure. But it’s different each time based on your search query, Google account, location and so on. It’s clearly not just an <code>.html</code> file being loaded from somewhere. <em>Why does it change? How?!</em></p>
+<h2 id="Computers-talking-to-each-other"><a href="#Computers-talking-to-each-other" class="headerlink" title="Computers talking to each other"></a>Computers talking to each other</h2><p>I’m gonna oversimplify in this section.</p>
+<p>You are connected to either a router or a mobile network tower on a building nearby if you’re on data. Whichever it is, we’ll call it <strong>the gateway</strong>.</p>
+<p>Your device is in blissful ignorance about the outside world. The Internet on the other side of the gateway is as much of an incomprehensible black box to your device as it is to you.</p>
+<p>Every computer, laptop and phone only ever communicates to its gateway.</p>
+<p>On the other end, there’s another machine set up by your ISP, usually a slightly bigger one than your router. Your whole apartment complex or neightbourhood is connected to it. And it too has a gateway of it’s own.</p>
+<p>We need to go deeper! The next level is also your ISP. This time though, the routing device has not one but multiple paths forward! At this level, the router looks at your <code>google.com</code> and decides which way to forward it. It <em>routes</em> your request — to another connected neighbourhood, or to another city, or to a gateway of another ISP.</p>
+<p>Part of the job of being an ISP is to configure gateways to forward requests closer to specified addresses, one gateway at a time.</p>
+<p><em>It’s gateways all the way down.</em></p>
+<p>When you want to go to <code>google.com</code>, your computer talks to its local network gateway, which sets off a chain reaction through the whole path to another computer. Every domain name like <code>google.com</code> is an address of a machine somewhere in the world.</p>
+<p>That machine runs software that waits for page requests and responds to them. This machine is called <strong>the server</strong> of a website and this software that generates webpages and responds to requests is called <strong>the server</strong> of the website. Wait, <em>what?</em> Yeah…</p>
+<p>Sometimes the hardware part is called <strong>the hosting</strong> and the software is called <strong>the server-side</strong>, as opposed to the client-side code that includes HTML and JavaScript executed in your browser.</p>
+<details><br><summary><em>Huh?</em> Click here for more details on networking.</summary><br><br>To learn about networks without such gross simpification watch <a href="https://www.youtube.com/playlist?list=PLowKtXNTBypH19whXTVoG3oKSuOcw_XeW" target="_blank" rel="external">these 13 short videos by Ben Eater</a> on Youtube. I watched them twice. <em>For fun</em>. They are that good.<br></details>
+
+<h2 id="Real-example-—-PHP"><a href="#Real-example-—-PHP" class="headerlink" title="Real example — PHP"></a>Real example — PHP</h2><p>Enough talking, let’s run server software on your computer!</p>
+<p>PHP is a language based on HTML and a program for translating it into HTML.</p>
+<ul>
+<li>You write ordinary HTML but can also use a special tag <code>&lt;?php ... ?&gt;</code>, inside which you write in PHP.</li>
+<li>You then process it using the PHP program. It executes PHP code inside those tags and gives you plain HTML that you can send to browsers.</li>
+</ul>
+<p>As you can see, no mention of web requests and responding to them.</p>
+<p>Hmm… Yeah, we’ll need a separate program for that. This one is called Apache. You specify which folder contains the website files and it sends them as responses to browsers. You can also tell it to preprocess certain files with another program before sending. In our case, that’s PHP for <code>.php</code> files.</p>
+<details><br><summary>Download latest <a href="https://www.apachefriends.org/download.html" target="_blank" rel="external">XAMPP</a> — a bundle with Apache and PHP included.</summary><br><br><img src="/images/xampp-download-page.png" alt="XAMPP download page"><br><br><em>Scroll further on that page for Linux and OS X downloads.</em><br></details><br><details><br><summary>Install all the things! Actually we only need Apache and PHP. You may deselect everything else.</summary><br><br><img src="/images/xampp-installation.png" alt="XAMPP installation"><br></details><br><details><br><summary>Allow Apache to access networking features of your computer.</summary><br><br><img src="/images/xampp-apache-firewall.png" alt="Windows Firewall complains about Apache"><br></details><br><details><br><summary>Launch the XAMPP Control Panel and start Apache - click “Start” on the Apache row.</summary><br><br><img src="/images/xampp-control-panel.png" alt="XAMPP Control Panel"><br></details>
+
+<p>Now open <a href="http://localhost" target="_blank" rel="external">http://localhost</a> in your browser. This address always refers to <em>this</em> device - the current one you’re using.</p>
+<details><br><summary>You should see <em>“Welcome to XAMPP”</em>.</summary><br><br><img src="/images/xampp-welcome-page.png" alt="XAMPP Dashboard Welcome page"><br></details>
+
+<p>You may not realize it yet, but you’re successfully running Apache with PHP locally — on your computer — and look at a page generated dynamically.</p>
+<p>What’s the folder where you installed XAMPP? For me it’s <code>C:\xampp</code>. Go there, open folder <code>htdocs</code> inside and delete everything from it. That’s the welcome page stuff.</p>
+<p>Now open any plain text editor (Notepad, Sublime Text, …) and create a file <code>index.php</code> inside the <code>htdocs</code> folder. Insert the following code:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;h2&gt;Hello world!&lt;/h2&gt;</div><div class="line">    Today is: &lt;b&gt;<span class="meta">&lt;?php</span> <span class="keyword">echo</span>(date(<span class="string">'Y-m-d'</span>)) <span class="meta">?&gt;</span>&lt;/b&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>Go to <a href="http://localhost/" target="_blank" rel="external">http://localhost</a> again and you should see this:</p>
+<p><img src="/images/xampp-php-hello-world.png" alt="XAMPP PHP Hello World"></p>
+<p>It’s crucial to understand how this is fundamentally different from ordinary HTML. In this example <code>&lt;?php ?&gt;</code> tag is preprocessed by PHP and <em>is never sent to the browser</em>. It’s already executed and translated to resulting HTML before sending.</p>
+<p>Now open XAMPP Control Panel again and click “Stop” next to Apache. Only one program at a time is allowed to respond to web requests. We need to give this spot to Node.js in the example below.</p>
+<h2 id="Real-example-—-Node-js"><a href="#Real-example-—-Node-js" class="headerlink" title="Real example — Node.js"></a>Real example — Node.js</h2><p>Let’s go! Same instructions, only this time the server-side language is gonna be JavaScript and not PHP.</p>
+<ul>
+<li>Download latest <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js</a>.</li>
+<li>Install it.</li>
+<li>Create a file <code>index.js</code> anywhere you want and open it with a text editor. Paste this code:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span></div><div class="line">  <span class="keyword">const</span> readableDate = date.getFullYear() + <span class="string">'-'</span> +</div><div class="line">    (date.getMonth() + <span class="number">1</span>) + <span class="string">'-'</span> +</div><div class="line">    date.getDate();</div><div class="line"></div><div class="line">  <span class="keyword">const</span> html = <span class="string">`</span></div><div class="line">    &lt;html&gt;</div><div class="line">      &lt;body&gt;</div><div class="line">        &lt;h2&gt;Hello world!&lt;/h2&gt;</div><div class="line">        Today is: &lt;b&gt;<span class="subst">$&#123;readableDate&#125;</span>&lt;/b&gt;</div><div class="line">      &lt;/body&gt;</div><div class="line">    &lt;/html&gt;</div><div class="line">  `</div><div class="line"></div><div class="line">  res.statusCode = <span class="number">200</span>;</div><div class="line">  res.end(html);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">const</span> hostname = <span class="string">'localhost'</span>;</div><div class="line"><span class="keyword">const</span> port = <span class="number">80</span>;</div><div class="line"></div><div class="line">server.listen(port, hostname, () =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Open http://localhost/ in your browser!'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>This source code may be confusing, especially if you’re not familiar with JavaScript and features added to it since 2015. It doesn’t matter, just follow along. You can read it and hopefully get a gist of what it does.</p>
+<details><br><summary>Open the file with Node.js</summary><br><br><img src="/images/nodejs-open-file-with-nodejs.png" alt="Open the file with Node.js"><br></details>
+
+<p>A black command line window should open, which is where your code runs.</p>
+<p>Go to <a href="http://localhost/" target="_blank" rel="external">http://localhost</a> again and you should see the same result as in the previous example with PHP.</p>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>Although it’s not clear from the pratical examples above, the actual mechanism of web requests and responses is quite simple.</p>
+<p>There’s no magic. In fact, web servers and browsers talk in plain text.</p>
+<p>Let’s have a look at what’s going on under the hood when you go to <code>http://google.com/about</code>. Your browser sends the following request — yes, as simple text:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">GET /about HTTP/1.1</div><div class="line">Host: google.com</div><div class="line">Accept: text/html</div><div class="line">Accept-Language: en-us</div><div class="line">User-Agent: Mozilla/4.0</div></pre></td></tr></table></figure>
+<p>The server receives the request and responds with this text:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK</div><div class="line">Date: Wen, 12 Apr 2017 05:56:53 GMT</div><div class="line">Server: Apache/2.2.14 (Win32)</div><div class="line">Last-Modified: Sat, 20 Nov 2004 01:07:17 GMT</div><div class="line">Content-Length: 44</div><div class="line">Content-Type: text/html</div><div class="line"></div><div class="line">&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello world!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>Well, of course, in reality the response is quite a lot longer since that page is so complex. But the general structure is exactly the same.</p>
+<p>The role of Apache and other similar software is to wait for requests, look at them and compose correct responses in this standard format.</p>
+<h2 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h2><blockquote>
+<p>Software deployment is all of the activities that make a software system available for use.</p>
+<p>— <em><a href="https://en.wikipedia.org/wiki/Software_deployment" target="_blank" rel="external">Wikipedia</a></em></p>
+</blockquote>
+<p>When someone says they are deploying a website, it means they already have source code (PHP, JavaScript or any other) ready and are in the process of:</p>
+<ul>
+<li>uploading it to the machine that acts as the server</li>
+<li>and then launching/updating the server software.</li>
+</ul>
+<h2 id="Further-reading"><a href="#Further-reading" class="headerlink" title="Further reading"></a>Further reading</h2><p>Just google what you wanna know, lol.</p>
+
+  </div>
+</article>
+
+
+
+      </div>
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 deltaidea
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/deltaidea?tab=repositories">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
