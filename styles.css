@@ -19,9 +19,11 @@ a {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   max-width: 700px;
 }
+
+.container > :first-child { margin-top: auto; }
+.container > :last-child { margin-bottom: auto; }
 
 .container ul {
   list-style-type: square;
