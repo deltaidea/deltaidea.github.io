@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Nikita Litvin</h1>
+    <h1 class="js-name">Nikita Litvin</h1>
     I write code.
     <section>
       <h2>Me</h2>
@@ -34,5 +34,11 @@
       </ul>
     </section>
   </div>
+
+  <script>
+    // Let's make my name colorful.
+    const hue = Math.floor(Math.random() * 360) // Random number from 0 to 360
+    document.querySelector('.js-name').style.color = `hsl(${hue}, 100%, 80%)`
+  </script>
 </body>
 </html>
